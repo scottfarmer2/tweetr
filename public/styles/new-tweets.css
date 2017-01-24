@@ -1,0 +1,33 @@
+.container {
+  background-color: lightgrey;
+  padding: 15px;
+}
+
+h2 {
+    height: 20px;
+    line-height: 0;
+    float: left;
+    text-align: left;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: x-large;
+    font-weight: 900;
+    color: darkgreen;
+    border-bottom: 1px solid black;
+}
+
+
+.new-tweet form textarea {
+  width: 100%;
+  padding: 3px 2em;
+}
+
+.new-tweet form span {
+    position: relative;
+    text-align: right;
+    left: 333px;
+}
+/*
+.new-tweet input {
+
+}*/
