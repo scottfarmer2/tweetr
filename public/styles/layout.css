@@ -21,16 +21,22 @@ body {
   background-color: #eee;
 }
 
+.clearfix::after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  main {
-        position: relative;
-    height: 163px;
-    top: 140px;
+
     width: 450px;
     margin: 0 auto;
     color: black;
     border: 1px solid gray;
-    border-radius: 3%;
+   /* border-radius: 3%;*/
+    background-color: white;
+    padding: 15px;
  }

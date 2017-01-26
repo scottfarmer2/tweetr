@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
@@ -17,22 +19,47 @@
 
     <link rel="stylesheet" href="/styles/new-tweets.css" type="text/css">
 
+     <link rel="stylesheet" href="/styles/tweet-boxes.css" type="text/css">
+
+    <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css">
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
+    <script src="/scripts/composer-char-counter.js"></script>
 
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <script type="text/javascript" src="/scripts/submit.js"></script>
+
+    <!-- <script>
+    $(function() {
+      var $button = $('#load-more-posts');
+      $button.on('click', function () {
+        console.log('Button clicked, performing ajax call...');
+        $.ajax({
+          url: 'more-posts.html',
+          method: 'GET',
+          success: function (morePostsHtml) {
+            console.log('Success: ', morePostsHtml);
+            $button.replaceWith(morePostsHtml);
+          }
+        });
+      });
+    });
+    </script> -->
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
+    <nav id="nav-bar" class="clearfix">
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
       <span class="header">Tweeter</span>
-
+      <button id="compose" type="button" class="button">Compose</button>
 
     </nav>
 
@@ -45,11 +72,36 @@
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <input id="submitTweet" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
+
+      <section id="tweet-boxes">
+        <!-- <article class="tweet">
+          <header>
+            <img class="userimg" src="https://i.ytimg.com/vi/IrC0jOIpt_8/maxresdefault.jpg">
+            <h3 class="user-name">Bill Fields</h3>
+            <p class="handle">@XmasPoo</p>
+          </header>
+          <div class="tweet-content"> This is the tweet</div>
+          <footer>
+            <div class="item">
+              <i class="fa fa-flag" aria-hidden="true"></i>
+              <i class="fa fa-retweet" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </div>
+            <p class="date"> days ago </p>
+
+          </footer>
+        </article> -->
+      </section>
+
     </main>
+
+
+
+
 
   </body>
 </html>
