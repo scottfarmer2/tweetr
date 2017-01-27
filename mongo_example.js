@@ -23,6 +23,9 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     });
   }
 
+  // function getTweets(callback) {
+  // db.collection("tweets").find().toArray(callback);
+  // }
   // ==> Later it can be invoked. Remember even if you pass
   //     `getTweets` to another scope, it still has closure over
   //     `db`, so it will still work. Yay!

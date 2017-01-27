@@ -11,11 +11,12 @@ h2 {
     border-bottom: 1px solid black;
 }
 .new-tweet {
-  margin-top: 150px;
+  margin-top: 100px;
   background-color:  lightgrey;
   border: 1px ridge black;
   padding: 10px;
   border-radius: 15px;
+  box-shadow: 0px 0.5px 0px 0.5px;
  }
 
 .new-tweet form textarea {
