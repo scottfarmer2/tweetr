@@ -4,18 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// function goodtweet(tweet) {
-//     if(tweet) {
-//         console.log('empty tweet')
-//         return "empty";
-//     } else if (tweet.lenght > 140) {
-//         console.log("too many characters")
-//         return "too long";
-//     } else {
-//         return 0;
-//     }
-// }
-
 
 $(function() {
   $('#submitTweet').on('click', function(event) {
@@ -94,7 +82,35 @@ $(function() {
   }
   ];
 
+  /////////////////////
 
+  function timeSince(date) {
+    var seconds = Math.floor((new Date() - date) / 1000);
+    var interval = Math.floor(seconds / 31536000);
+    if (interval > 1) {
+        return interval + " years";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+        return interval + " months";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+        return interval + " days";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+        return interval + " hours";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+        return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+  }
+
+
+  ////////////////////////
 
 
   function createTweetElement(data) {
@@ -110,7 +126,7 @@ $(function() {
     var icon1 = $("<i>", {class: "fa fa-flag"});
     var icon2 = $("<i>", {class: "fa fa-retweet"});
     var icon3 = $("<i>", {class: "fa fa-heart"});
-    var daysAgo = $("<p>", {class: "date", text: data['created_at']});
+    var daysAgo = $("<p>", {class: "date", text: timeSince(data['created_at'])});
 
 
     header.append(avatar, userName, handle);
