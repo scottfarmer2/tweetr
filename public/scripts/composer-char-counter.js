@@ -5,9 +5,9 @@ $(document).ready(function() {
     let counterLocation = $ (this).parent().find(".counter");
     let charaCounter = counterLocation.text(140 - number);
     if (number >  140) {
-      charaCounter.css('color' , 'red');
+      charaCounter.addClass('error');
     } else {
-      charaCounter.css('color', 'black');
+      charaCounter.removeClass('error');
     }
 
   });
